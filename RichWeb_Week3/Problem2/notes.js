@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const noteEdit = document.createElement("button");
         noteEdit.classList.add("edit-button");
-        noteEdit.textContent = "Edit Note"
+        noteEdit.textContent = "Edit Note";
+
+        const noteDelete = document.createElement("button");
+        noteDelete.add("delete-button");
+        noteDelete.textContent = "Delete Note";
 
         // Add an event listener to the "Edit Note" button
         noteEdit.addEventListener("click", function() {
