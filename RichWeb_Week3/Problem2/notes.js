@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         noteEdit.textContent = "Edit Note";
 
         const noteDelete = document.createElement("button");
-        noteDelete.add("delete-button");
+        noteDelete.classList.add("delete-button");
         noteDelete.textContent = "Delete Note";
 
         // Add an event listener to the "Edit Note" button
@@ -28,9 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        noteDelete.addEventListener("click", function() {
+            noteElement.remove();
+            noteEdit.remove();
+            noteDelete.remove();
+        });
+
         const notesContainer = document.getElementById("notes-container");
         notesContainer.appendChild(noteElement);
-        notesContainer.appendChild(noteEdit)
+        notesContainer.appendChild(noteEdit);
+        notesContainer.appendChild(noteDelete);
 
         document.getElementById("note").value = "";
     });
