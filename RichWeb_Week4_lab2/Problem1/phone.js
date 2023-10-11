@@ -10,36 +10,27 @@ document.addEventListener("DOMContentLoaded", function() {
         const namePattern = /^[a-zA-Z\s]+$/;
 
         if (contactForm.checkValidity() && namePattern.test(name)) {
-            const table_name = document.querySelector("#table-name");
-            const table_mobile = document.querySelector("#table-mobile");
-            const table_email = document.querySelector("#table-email");
+            // Get the table
+            const table = document.querySelector("#table");
 
-            const newRow1 = document.createElement("div");
-            newRow1.className = "table-row";
-            const newRow2 = document.createElement("div");
-            newRow2.className = "table-row";
-            const newRow3 = document.createElement("div");
-            newRow3.className = "table-row";
-    
-            const nameDiv = document.createElement("div");
-            nameDiv.className = "table-item";
-            nameDiv.innerHTML = `<h5>${name}</h5>`;
-    
-            const mobileDiv = document.createElement("div");
-            mobileDiv.className = "table-item";
-            mobileDiv.innerHTML = `<h5>${mobile}</h5>`;
-    
-            const emailDiv = document.createElement("div");
-            emailDiv.className = "table-item";
-            emailDiv.innerHTML = `<h5>${email}</h45`;
-    
-            newRow1.appendChild(nameDiv);
-            newRow2.appendChild(mobileDiv);
-            newRow3.appendChild(emailDiv);
-    
-            table_name.appendChild(newRow1);
-            table_mobile.appendChild(newRow2);
-            table_email.appendChild(newRow3);
+            // Create a new row
+            const Row = table.insertRow(1)
+
+            // Create cells for the new row
+            const nameCell = Row.insertCell(0);
+            const mobileCell = Row.insertCell(1);
+            const emailCell = Row.insertCell(2);
+
+            // Set the cell content to the input values
+            nameCell.textContent = name;
+            mobileCell.textContent = mobile;
+            emailCell.textContent = email;
+
+            // Apply CSS classes to the new row and cells
+            Row.classList.add("row");
+            nameCell.classList.add("table-item");
+            mobileCell.classList.add("table-item");
+            emailCell.classList.add("table-item");
     
             // Clear the form values
             document.getElementById("name").value = "";
