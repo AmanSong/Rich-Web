@@ -1,0 +1,19 @@
+.title {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.inputs {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 3.5%;
+    border-radius: 10px;
+    border: 5px rgb(0, 119, 255) solid;
+    background-color: rgb(181, 210, 236);
+}
+
+.search-contacts {
+    text-align: center;
+}
