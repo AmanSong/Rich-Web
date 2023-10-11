@@ -10,17 +10,17 @@
         <h1 class="title">Phone Directory</h1>
 
         <div class="inputs">
-            <form>
+            <form id="contact-form">
                 <input type="text" id="name" name="name" placeholder="Contact Name" maxlength="20" required>
 
-                <input type="number" id="mobile" name="mobile" placeholder="Mobile Number" maxlength="10" required>
+                <input type="number" id="mobile" name="mobile" placeholder="Mobile Number"oninput="enforceMaxLength(this, 10)" required>
 
                 <input type="email" id="email" name="email" placeholder="Email" maxlength="40" required>
 
                 <button id="add-contact">Add Contact</button>
             </form>
 
-            <div class="error" hidden>Error</div>
+            <div id="error" hidden>Error, Please check your inputs are correct</div>
         </div>
 
         <div class="search-contacts">
@@ -28,19 +28,27 @@
             <input type="text" id="search" name="search">
         </div>
 
+        <h2 class="contact-title">Contacts Summary</h2>
         <div class="table">
-            <div class="table-name">
-
+            <div class="table-row">
+                <div id="table-name" class="table-item">
+                    <h4 class="sub-title">Contact Name</h4>
+                </div>
             </div>
-
-            <div class="table-number">
-                
+        
+            <div class="table-row">
+                <div id="table-mobile" class="table-item">
+                    <h4 class="sub-title">Mobile Number</h4>
+                </div>
             </div>
-
-            <div class="table-email">
-                
+        
+            <div class="table-row">
+                <div id="table-email" class="table-item">
+                    <h4 class="sub-title">Email</h4>
+                </div>
             </div>
         </div>
+        
 
     </body>
 </html>

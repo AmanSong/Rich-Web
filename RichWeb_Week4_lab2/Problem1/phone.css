@@ -16,4 +16,38 @@
 
 .search-contacts {
     text-align: center;
+    margin-bottom: 5%;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid black;
+    margin: auto;
+    width: 50%;
+}
+
+.table-item {
+    display: grid;
+    text-align: left;
+    border: 0.1px solid black;
+}
+
+.contact-title {
+    text-align: center;
+}
+
+.sub-title {
+    padding-left: 5%;
+    float: left;
+}
+
+#error {
+    background-color: rgb(236, 101, 101);
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 5px;
+    border: 2px red solid;
+    padding: 1%;
 }
