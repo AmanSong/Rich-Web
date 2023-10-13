@@ -1,0 +1,59 @@
+body {
+    background-color: gainsboro;
+}
+
+.search {
+    text-align: center;
+    margin-top: 2%
+}
+.search-bar {
+    width: 25vw;
+    height: 2.5vh;
+    margin-right: .5%;
+}
+.search-button {
+    width: 9vw;
+    height: 3.15vh;
+}
+
+.profile-main {
+    display: flex;
+}
+
+.user-profile {
+    margin: auto;
+    width: 15%;
+    height: 47vh;
+    margin-left: 32vw;
+    margin-top: 2.5%;
+    padding: 1%;
+    background-color: gray;
+}
+.profile-details {
+    display: grid;
+    grid-template-columns: auto;
+
+}
+.profile-details-grid {
+    height: 3vh;
+    text-align: left;
+    padding: 1%;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+#avatar {
+    height: 20vh;
+}
+
+.user-repos {
+    margin: auto;
+    width: 15%;
+    height: 47vh;
+    margin-left: -30.5vw;
+    margin-top: 2.5%;
+    padding: 1%;
+    background-color: gray;
+}
+.repo-container {
+    background-color: aliceblue;
+}
