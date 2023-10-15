@@ -18,15 +18,29 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("email").textContent = `Email: ${data.email || "N/A"}`;
                 document.getElementById("location").textContent = `Location: ${data.location || "N/A"}`;
                 document.getElementById("gists").textContent = `Gists: ${data.public_gists || "N/A"}`;
-        })
 
-        fetch(`https://api.github.com/users/${input}/repos_url`)
-        .then(response => response.json())
-        .then(data => {
-            const repo = document.createElement("div")
-            repo.classList.add("repo-container")
-            
-        })
+                // Make another API request to fetch user's repositories
+                return fetch(data.repos_url);
+            })
+            .then(response => response.json())
+            .then(reposData => {
+                // Access the "user-repos" container
+                const userReposContainer = document.querySelector('.user-repos .repo-container');
+                
+                // Clear any previous content in the user-repos container
+                userReposContainer.innerHTML = '';
+
+                // Add each repository to the container
+                reposData.forEach(repo => {
+                    const repoElement = document.createElement('div');
+                    repoElement.classList.add('repo-item');
+                    repoElement.innerHTML = `
+                        <h4>Name: ${repo.name}</h4>
+                        <p>Description: ${repo.description || "N/A"}</p>
+                    `;
+                    userReposContainer.appendChild(repoElement);
+                });
+            })
 
     });
 

@@ -67,4 +67,12 @@ body {
     margin-top: 15%;
     background-color: aliceblue;
     border: 1px black solid;
+    height: 65vh;
+    overflow-y: auto;
+}
+.repo-item {
+    border: 1px solid black;
+    margin: 1em 0; /* Add spacing between repositories */
+    padding: 1em;
+    background-color: rgb(182, 216, 245);
 }
