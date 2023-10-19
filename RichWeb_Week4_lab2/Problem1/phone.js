@@ -150,11 +150,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
-
-// to sort data in descending or ascending
-// document.addEventListener("OnClick", function sort() {
-    
-// });
-  
   
