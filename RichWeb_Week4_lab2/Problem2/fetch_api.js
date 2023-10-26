@@ -6,7 +6,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     const titles = posts.map(posts => posts.title);
 
     // use filter to find titles with more than 6 words
-    const result = titles.filter(title => title.split(' ').length > 6);
+    const result = titles.filter(title => title.split(/\s/).length > 6);
 
     // print out result
     console.log(result);
@@ -16,7 +16,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
   .then(posts => {
 
-    const words = posts.flatMap((posts) => posts.body.split(' '))
+    const words = posts.flatMap((posts) => posts.body.split(/\s/))
 
     const frequency = words.reduce((map, word) => {
         map[word] = (map[word] || 0) + 1;
