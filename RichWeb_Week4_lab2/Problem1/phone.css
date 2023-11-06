@@ -30,8 +30,8 @@
     text-align: center;
 }
 
-.row:nth-child(odd) {
-    background-color: #deec93; 
+.row:nth-child(even) {
+    background-color: #e3e3e3f2; 
 }
 
 .table-item {
