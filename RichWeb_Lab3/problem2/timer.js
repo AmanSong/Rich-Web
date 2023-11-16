@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // Subscribe to the countdown observable
         countdownSubscription = countdown$.subscribe((count) => {
             const timerElement = document.querySelector(".timer");
-            const hours = Math.floor(count / 3600);
-            const minutes = Math.floor((count % 3600) / 60);
-            const seconds = count % 60;
+            const hours = String(Math.floor(count / 3600)).padStart(2, "0");
+            const minutes = String(Math.floor((count % 3600) / 60)).padStart(2, "0");
+            const seconds = String(count % 60).padStart(2, "0");
 
-            if (hours === 0 && minutes === 0) {
+            if (hours === '00' && minutes === '00') {
                 timerElement.innerHTML = `${seconds}s`;
-            } else if (hours === 0) {
+            } else if (hours === '00') {
                 timerElement.innerHTML = `${minutes}m ${seconds}s`;
             } else {
                 timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
