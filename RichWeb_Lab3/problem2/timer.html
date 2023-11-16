@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Timer</title>
     <link rel="stylesheet" href="timer.css">
     <script src="https://unpkg.com/rxjs@%5E7/dist/bundles/rxjs.umd.min.js"></script>
     <script src="./timer.js" defer></script>
 </head>
+
 <body>
     <div class="main">
         <div class="time-container">
             <div class="hours">
-                <input class="hour-input" type="number" placeholder="H">
+                <input class="hour-input" type="number" placeholder="H" min="0" oninput="this.value = 
+                !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
             </div>
             <div class="dots">:</div>
             <div class="minutes">
-                <input class="minute-input" type="number" placeholder="M">
+                <input class="minute-input" type="number" placeholder="M" min="0" oninput="this.value = 
+                !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
             </div>
             <div class="dots">:</div>
             <div class="seconds">
-                <input class="second-input" type="number" placeholder="S">
+                <input class="second-input" type="number" placeholder="S" min="0" oninput="this.value = 
+                !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
             </div>
         </div>
 
         <div class="button-container">
             <button class="start-button">START COUNTDOWN</button>
         </div>
+
+        <div class="count-down">
+            <div class="timer">
+
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
