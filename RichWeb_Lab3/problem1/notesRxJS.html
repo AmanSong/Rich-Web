@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes RxJS</title>
+    <link rel="stylesheet" href="rxjs_notes.css">
+    <script src="https://unpkg.com/rxjs@%5E7/dist/bundles/rxjs.umd.min.js"></script>
+    <script src="./notesRxJS.js" defer></script>
+</head>
+<body>
+    <h1>Note Taking App</h1>
+
+    <div class="note-app">
+        <div class="note-input">
+            <h4>Note: </h4>
+            <textarea rows="10" cols="40" id="note" name="note"></textarea>
+        </div>
+        
+        <div class="note-colour">
+            <h4>Color: </h4>
+            <select class="select">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+
+        <div class="note-button">
+            <button id="add-button">Add Note</button>
+        </div>
+
+        <div class="notes-container" id="notes-container">
+            
+        </div>
+    </div>
+</body>
+</html>

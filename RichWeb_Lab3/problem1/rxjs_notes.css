@@ -1,0 +1,32 @@
+.note-app {
+    background-color: aliceblue;
+    padding: 2.5%;
+    font-size: 3vh;
+}
+
+.select {
+    width: 200px;
+}
+
+.note-button {
+    margin-top: 5%;
+}
+#add-button {
+    background-color: rgb(123, 138, 207);
+    padding: 1%;
+}
+
+.note {
+    height: 10vh;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 2.5%;
+}
+
+.edit-button {
+    width: 10vw;
+}
+
+.delete-button {
+    width: 10vw;
+}
