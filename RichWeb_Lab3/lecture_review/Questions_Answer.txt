@@ -1,0 +1,62 @@
+Q1.
+Explain what is meant by the stream abstraction. What is the relationship between
+streams and the observer pattern? What are streams useful for modeling and when
+might you use them in Rich Web development?
+
+A1.
+Stream abstraction refers to a sequence of data flow values while still maintaining functionality.
+This allows programs to process asynchronous, meaning they dont follow any set order, one possible 
+problem that may arise if they all share a global state is when they encounter race conditions.
+This is when multiple tasks fight over the same resource and tries to read it or change it.
+This can cause a lot of problems in the long run as the state may change when a task was expecting something else.
+
+ events such as user inputs, API calls, server responses etc.
+The observer pattern relates to streams as it consists of a an observable and a observer.
+The observable or subject is a source of constantly streaming data and the observer watches this subject,
+reacting to it whenever data is observed essentially. This allows for reactive programming.
+
+Streams are useful for modeling asynchronous, meaning they dont follow any set order, one possible 
+problem that may arise if they all share a global state is when they encounter race conditions.
+This is when multiple tasks fight over the same resource and tries to read it or change it.
+This can cause a lot of problems in the long run as the state may change when a task was expecting something else.
+
+ data flows, receiving constant data and helps make it more standarised and clear,
+you will most likely see streams being used for event handling such as user input from a mouse or keyboard,
+server responses to load a website, real-time updates such as messaging, watching videos and livestreaming etc.
+
+
+Q2.
+Assume that you are building an interface to an API in your Rich Web App. Describe in
+detail how you could use the RxJS library to handle asynchronous network responses to
+API requests. In your opinion, what are the benefits to using a streams library for
+networking over, say, promises? And what do you think are the downsides?
+
+A2.
+If i were to build an interface to an API in my rich web app, i could utilise the RxJS library to
+create an observable which would be the API and handle any requests that may be coming.
+Then i would subsribe to the newly created observable and perform any actions required such as changing states,
+performing logic on recieved data, notifying users of the recieved data etc.
+
+Streams have some advantages over promises, firstly, streams can handle multiple data meanwhile a promise can only handle one.
+This is useful if we are expecting to recieve large amounts of data and a promise wont cut if.
+Second, streams can be canceled by unsubsribing or by other means while promises cannot as they promise to return a value.
+Third, streams provide much more features than a promise such as map and reduce etc.
+
+The downsides may include unnesscary complexity or features if a developer does not need it.
+Some may prefer the simplicity of a promise and they are completely fine with meanwhile streams may just offer
+extra complexity that is not required.
+
+Q3.
+Consider three asynchronous tasks, A,B & C. What are the consequences of these
+functions sharing global state? What is a good practice to alleviate any problems
+associated with this?
+
+A3.
+If three tasks A B and C are asynchronous, meaning they dont follow any set order, one possible 
+problem that may arise if they all share a global state is when they encounter race conditions.
+This is when multiple tasks fight over the same resource and tries to read it or change it.
+This can cause a lot of problems in the long run as the state may change when a task was expecting something else.
+
+A good practice to prevent race conditions is to not use global variables, another good practice is to use thread locks,
+this is where when task A uses the resource, it prevents other tasks to access the resource until task A is finished.
+Other practices can include using await or promises.
