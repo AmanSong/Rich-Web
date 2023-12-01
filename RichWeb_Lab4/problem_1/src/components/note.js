@@ -1,9 +1,10 @@
 import React from "react";
 import './Note.css'
 
-function Note({ text }) {
+function Note({ text, color }) {
+  console.log(color)
     return (
-      <div className="note">
+      <div className="note" style={{backgroundColor:color}}>
         {text}
       </div>
     );
