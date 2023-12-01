@@ -17,35 +17,3 @@
   height: 100vh;
   width: 50vw;
 }
-
-.note,
-.color,
-.button-container {
-  margin-top: 10%;
-  background-color: #bbbec4;
-  margin: 5%;
-  padding: 5%;
-}
-
-.note textarea,
-.color select,
-.button {
-  width: 50%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.button {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #d2cece;
-}
-
-.button:active {
-  background-color: #a4a0a0;
-}
