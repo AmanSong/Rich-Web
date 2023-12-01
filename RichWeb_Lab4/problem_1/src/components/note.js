@@ -1,10 +1,13 @@
 import React from "react";
+import './Note.css'
 
-function note() {
-
+function Note({ text }) {
     return (
-        <div className="note">
-            
-        </div>
-    )
-}
+      <div className="note">
+        {text}
+      </div>
+    );
+  }
+  
+  export default Note;
+  
