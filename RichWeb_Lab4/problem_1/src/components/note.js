@@ -1,14 +1,14 @@
 import React from "react";
 import './Note.css'
 
-function Note({ text, color }) {
-  console.log(color)
-    return (
-      <div className="note" style={{backgroundColor:color}}>
-        {text}
-      </div>
-    );
-  }
-  
-  export default Note;
-  
+function Note({ id, text, color, onDelete, onEdit }) {
+  return (
+    <div className="note" style={{ backgroundColor: color }}>
+      <span>{text}</span>
+      <button onClick={() => onDelete(id)}>Delete</button>
+      <button onClick={() => onEdit(id)}>Edit</button>
+    </div>
+  );
+}
+
+export default Note;

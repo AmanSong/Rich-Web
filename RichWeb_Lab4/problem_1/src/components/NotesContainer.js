@@ -13,12 +13,21 @@ function NotesContainer() {
   };
 
   const saveNoteHandler = () => {
-    setNotes((prevNotes) => [...prevNotes, { text: inputText, color: selectedColor }]);
+    setNotes((prevNotes) => [...prevNotes, { id: Date.now(), text: inputText, color: selectedColor }]);
     setInputText("");
   };
 
   const colorChangeHandler = (color) => {
     setSelectedColor(color);
+  };
+
+  const deleteNoteHandler = (id) => {
+    setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
+  };
+
+  const editNoteHandler = (id) => {
+    // You can implement edit logic here
+    console.log(`Editing note with id ${id}`);
   };
 
   return (
@@ -29,8 +38,15 @@ function NotesContainer() {
         onColorChange={colorChangeHandler}
       />
 
-      {notes.map((note, index) => (
-        <Note key={index} text={note.text} color={note.color} />
+      {notes.map((note) => (
+        <Note
+          key={note.id}
+          id={note.id}
+          text={note.text}
+          color={note.color}
+          onDelete={deleteNoteHandler}
+          onEdit={editNoteHandler}
+        />
       ))}
     </div>
   );
