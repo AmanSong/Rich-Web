@@ -16,7 +16,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Input submitted:', inputValue);
+    console.log('Input submitted:', inputValue, selectedValue);
     setInputValue('');
   };
 
@@ -43,14 +43,15 @@ function App() {
                 value={selectedValue}
                 onChange={handleDropdownChange}
               >
-                <option value="">Select an item</option>
-                <option value="item1">Item 1</option>
-                <option value="item2">Item 2</option>
-                <option value="item3">Item 3</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
               </select>
-              {/* Button to submit the form */}
-              <button type="submit">Submit</button>
             </form>
+          </div>
+
+          <div className='button-container'>
+            <button className='button' onClick={handleSubmit}>Create Note</button>
           </div>
 
           <div className="notes-container">
