@@ -34,7 +34,24 @@
     transition: background-color 0.3s ease;
 }
 
+.delete-button {
+    background-color: #e01600;
+    color: white;
+}
+
 .delete-button:hover,
 .edit-button:hover {
     background-color: #be8a84;
 }
+
+.note-container textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(216, 216, 216, 0.374);
+    box-sizing: border-box;
+  }
+  

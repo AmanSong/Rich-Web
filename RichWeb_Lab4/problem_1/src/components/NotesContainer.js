@@ -25,9 +25,12 @@ function NotesContainer() {
     setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
   };
 
-  const editNoteHandler = (id) => {
-    // You can implement edit logic here
-    console.log(`Editing note with id ${id}`);
+  const editNoteHandler = (id, newText) => {
+    setNotes((prevNotes) =>
+      prevNotes.map((note) =>
+        note.id === id ? { ...note, text: newText } : note
+      )
+    );
   };
 
   return (
