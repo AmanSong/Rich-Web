@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 
 import NotesContainer from './components/NotesContainer'
+import Weather from './components/Weather';
 
 function App() {
 
@@ -10,8 +11,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="main">
+          <h1>React Notes App</h1>
 
-          <NotesContainer></NotesContainer>
+          <div>
+            <Weather></Weather>
+          </div>
+
+          <div className='note-section'>
+            <NotesContainer></NotesContainer>
+          </div>
         </div>
       </header>
     </div>

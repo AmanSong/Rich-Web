@@ -6,7 +6,7 @@ import CreateNote from "./CreateNote";
 function NotesContainer() {
   const [notes, setNotes] = useState([]);
   const [inputText, setInputText] = useState("");
-  const [selectedColor, setSelectedColor] = useState("#3498db"); // Default color
+  const [selectedColor, setSelectedColor] = useState("#3498db");
 
   const textHandler = (e) => {
     setInputText(e.target.value);

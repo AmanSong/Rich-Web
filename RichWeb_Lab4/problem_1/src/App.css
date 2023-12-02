@@ -16,3 +16,11 @@
   height: 100vh;
   width: 50vw;
 }
+
+.note-section {
+  background-color: rgba(222, 222, 222, 0.356);
+  width: 95%;
+  border-radius: 16px;
+  justify-content: center;
+  margin: auto;
+}
