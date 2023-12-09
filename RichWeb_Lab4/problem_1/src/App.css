@@ -1,3 +1,7 @@
+html {
+  background-color: #798192;
+}
+
 .App {
   text-align: center;
 }
@@ -13,7 +17,7 @@
 
 .main {
   background-color: aliceblue;
-  height: 100vh;
+  height: 100%;
   width: 50vw;
 }
 

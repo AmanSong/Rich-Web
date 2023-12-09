@@ -69,7 +69,18 @@ function Weather() {
                     </div>
                     <div className="weather">{weather.weather[0].main}</div>
                 </div>
-            ) : null}
+            ) : 
+            <div className="search-box" style={{width:'50%', justifyContent:'center', margin:'auto'}}>
+            <input
+                type="text"
+                className="search-bar"
+                placeholder="Ireland..."
+                onChange={e => setQuery(e.target.value)}
+                value={query}
+                onKeyPress={search}
+            />
+            <div className="weather">Please check your spelling</div>
+        </div>}
         </div>
     );
 }
