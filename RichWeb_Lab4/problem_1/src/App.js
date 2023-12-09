@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import NotesContainer from './components/NotesContainer'
 import Weather from './components/Weather';
+import Music from './components/Music';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 
           <div>
             <Weather></Weather>
+            <Music></Music>
           </div>
 
           <div className='note-section'>
