@@ -1,0 +1,8 @@
+Q3. We have looked at three kinds of asynchronous programming mechanisms, namely callbacks, promises and streams. Mention one advantage and one disadvantage of each type.
+
+A3.
+Callbacks, is a technique that uses functions to call other functions, the advantage of this is that it is very simple to implment,
+the disadvantage is that it can be very easy to get lost if you have many callbacks all calling functions everywhere.
+
+Promises, a promise is when a function basically promises a return of to another function or code, the main advantage is that errors can be handled easier and
+code can become much more readable, disadvantages are that once a promise has been initiated it cannot be stopped, this can be bad if you must stop the promise.

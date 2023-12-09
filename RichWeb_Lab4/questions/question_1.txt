@@ -1,0 +1,22 @@
+Q1. Explain using code examples what is meant by props and state in React JS?
+
+A1. In react props and state are variables that can contain any type of data, however,
+props allow multiple types of data much like a python dictionary and can be returned to other react componenets to read from but cant modify,
+a state on the other hand is used to handle internal data within a component and can be set using a useState.
+
+// Sample code for props
+const ParentComponent = () => {
+  const data = 'Hello from Parent';
+  return <ChildComponent message={data} />;
+};
+const ChildComponent = (props) => {
+  return <p>{props.message}</p>;
+};
+
+// Sample code for state
+const [count, setCount] = useState(0);
+
+const handleIncrement = () => {
+setCount(count + 1);
+};
+<button onClick={handleIncrement}>Increment</button>

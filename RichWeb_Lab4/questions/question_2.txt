@@ -1,0 +1,11 @@
+Q2. In functional programming, what does the term functor mean? Can you give an example in JavaScript?
+
+A2. Functors are data types usually an array that implments a map function. This allows it to transform values within the data type
+while maintaining structure of the data.
+
+// Sample
+const array = [1,2,3,4,5];
+
+const doubled = array.map((number) => number * 2)
+
+doubled contains [2,4,6,8,10];

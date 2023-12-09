@@ -1,0 +1,10 @@
+Q5. Detail how the browser loads and bootstraps a rich web application from an initial URL
+
+A5.
+Once a user inputs a URL, the browser then begins to convert the url into a IP address using DNS so it can identify the server hosting ther web app,
+once the ip address is found, the browser iniates a http request to the server to retrieve the files such as html, css etc.
+When the browser recieves the files from the server it then begins to parse and load the files,
+any css found it will parse and render as well,
+any javascript will also be executed or fetched.
+After this then the web app can then be rendered on screen for the user to view.
+Any additional resourves required will be fetched and rendered in the background.
